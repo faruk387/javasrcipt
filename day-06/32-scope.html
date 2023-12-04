@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        let globalScopeVariable=21;
+        let hybridVariable=100;
+       const myFunction=() => {
+        let funktionScopeVariable=33;
+        let hybridVariable=200;
+        if(funktionScopeVariable>0){
+            let blockScopeVariable=50;
+            let hybridVariable=300
+            blockScopeVariable+=globalScopeVariable;
+            console.log(blockScopeVariable)
+            console.log("hybridVariable in blockscope "+hybridVariable);
+        }
+        
+        //console.log(blockScopeVariable)
+        console.log("hybridVariable in funktion "+hybridVariable)
+      
+
+       } 
+       myFunction();
+       console.log("hybridVariable in globalscope "+hybridVariable)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+        }
+        .mode{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: none;
+            background-color: blue;
+            box-shadow: 0 3px 5px blueviolet;
+            cursor: pointer;
+        }
+       
+
+    </style>
+  </head>
+  <body class="">
+    <h1>Dark Mode Switcher</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque expedita
+      alias eligendi eum quibusdam! Aliquid nam maiores, enim maxime neque unde,
+      veniam blanditiis doloribus obcaecati voluptatem odit repudiandae eveniet
+      ratione? Ea ut tenetur beatae, illo placeat ullam esse eaque officiis sit
+      deleniti vitae similique omnis, corrupti nisi eum. Blanditiis, dignissimos
+      quo? Magni atque quidem laborum exercitationem qui vitae, tempora magnam?
+      Exercitationem iste velit esse! Necessitatibus quae doloribus aut. Dolores
+      perferendis est fugiat quae magnam quisquam minima et, enim quasi saepe
+      quas fuga itaque blanditiis iusto laborum ad atque nisi necessitatibus?
+      Fugit sequi accusamus beatae laborum aspernatur ad, minus nisi, excepturi
+      dolore nobis illum quos quia. Soluta corporis architecto fugit mollitia
+      iusto a, nulla, quos nisi eos repellat omnis, officia harum. Ab, voluptate
+      placeat. Accusamus explicabo tempore quibusdam voluptate sunt omnis ex
+      quasi commodi, distinctio officiis ullam repudiandae corporis incidunt quo
+      laborum. Veritatis, fugiat ratione! Id dolore natus vero iusto sequi?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque expedita
+        alias eligendi eum quibusdam! Aliquid nam maiores, enim maxime neque unde,
+        veniam blanditiis doloribus obcaecati voluptatem odit repudiandae eveniet
+        ratione? Ea ut tenetur beatae, illo placeat ullam esse eaque officiis sit
+        deleniti vitae similique omnis, corrupti nisi eum. Blanditiis, dignissimos
+        quo? Magni atque quidem laborum exercitationem qui vitae, tempora magnam?
+        Exercitationem iste velit esse! Necessitatibus quae doloribus aut. Dolores
+        perferendis est fugiat quae magnam quisquam minima et, enim quasi saepe
+        quas fuga itaque blanditiis iusto laborum ad atque nisi necessitatibus?
+        Fugit sequi accusamus beatae laborum aspernatur ad, minus nisi, excepturi
+        dolore nobis illum quos quia. Soluta corporis architecto fugit mollitia
+        iusto a, nulla, quos nisi eos repellat omnis, officia harum. Ab, voluptate
+        placeat. Accusamus explicabo tempore quibusdam voluptate sunt omnis ex
+        quasi commodi, distinctio officiis ullam repudiandae corporis incidunt quo
+        laborum. Veritatis, fugiat ratione! Id dolore natus vero iusto sequi?
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque expedita
+        alias eligendi eum quibusdam! Aliquid nam maiores, enim maxime neque unde,
+        veniam blanditiis doloribus obcaecati voluptatem odit repudiandae eveniet
+        ratione? Ea ut tenetur beatae, illo placeat ullam esse eaque officiis sit
+        deleniti vitae similique omnis, corrupti nisi eum. Blanditiis, dignissimos
+        quo? Magni atque quidem laborum exercitationem qui vitae, tempora magnam?
+        Exercitationem iste velit esse! Necessitatibus quae doloribus aut. Dolores
+        perferendis est fugiat quae magnam quisquam minima et, enim quasi saepe
+        quas fuga itaque blanditiis iusto laborum ad atque nisi necessitatibus?
+        Fugit sequi accusamus beatae laborum aspernatur ad, minus nisi, excepturi
+        dolore nobis illum quos quia. Soluta corporis architecto fugit mollitia
+        iusto a, nulla, quos nisi eos repellat omnis, officia harum. Ab, voluptate
+        placeat. Accusamus explicabo tempore quibusdam voluptate sunt omnis ex
+        quasi commodi, distinctio officiis ullam repudiandae corporis incidunt quo
+        laborum. Veritatis, fugiat ratione! Id dolore natus vero iusto sequi?
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque expedita
+        alias eligendi eum quibusdam! Aliquid nam maiores, enim maxime neque unde,
+        veniam blanditiis doloribus obcaecati voluptatem odit repudiandae eveniet
+        ratione? Ea ut tenetur beatae, illo placeat ullam esse eaque officiis sit
+        deleniti vitae similique omnis, corrupti nisi eum. Blanditiis, dignissimos
+        quo? Magni atque quidem laborum exercitationem qui vitae, tempora magnam?
+        Exercitationem iste velit esse! Necessitatibus quae doloribus aut. Dolores
+        perferendis est fugiat quae magnam quisquam minima et, enim quasi saepe
+        quas fuga itaque blanditiis iusto laborum ad atque nisi necessitatibus?
+        Fugit sequi accusamus beatae laborum aspernatur ad, minus nisi, excepturi
+        dolore nobis illum quos quia. Soluta corporis architecto fugit mollitia
+        iusto a, nulla, quos nisi eos repellat omnis, officia harum. Ab, voluptate
+        placeat. Accusamus explicabo tempore quibusdam voluptate sunt omnis ex
+        quasi commodi, distinctio officiis ullam repudiandae corporis incidunt quo
+        laborum. Veritatis, fugiat ratione! Id dolore natus vero iusto sequi?
+      </p>
+      <button class="mode" onclick="setMode()">MODE</button>
+      <script>
+        function setMode(){
+            const body =document.querySelector("body");
+            if(body.classList.contains("dark")){
+body.classList.remove("dark");
+            }else{
+                body.classList.add("dark")
+            }
+           
+
+        }
+      </script>
+  </body>
+</html>

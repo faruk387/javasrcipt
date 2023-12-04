@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 class="title" style="color: red">
+      Document <span style="color: blue">Object</span> Model
+    </h1>
+   <ul class="menu">
+    <li>Lorem, ipsum dolor.</li>
+    <li>Consectetur, modi excepturi.</li>
+    <li>Velit, in modi.</li>
+    <li>Consequuntur, architecto recusandae?</li>
+    <li>Aperiam, beatae debitis.</li>
+   </ul>
+
+    <p class="about">
+      <span
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel illo
+        consequatur eius ea odio adipisci, quasi illum quas consectetur corrupti
+        placeat natus officiis ipsam nostrum sequi iusto sapiente aut!
+        Laudantium.</span
+      ><span
+        >Voluptatibus error placeat sapiente possimus architecto voluptatum sit
+        odio aliquid asperiores voluptate, sint numquam? Voluptatem, nisi.
+        Possimus, libero aliquid nihil dolore voluptatem veniam praesentium
+        aspernatur? Atque aut repudiandae non minima.</span
+      >
+    </p>
+    <script>
+        const title= document.querySelector("h1.title")
+        console.log(title)
+
+        const firstMenuItem=document.querySelector("ul.menu li")
+        console.log(firstMenuItem)
+
+        const lastMenuItem=document.querySelector("ul.menu li:last-child")
+        console.log(lastMenuItem)
+        const thirdMenuItem=document.querySelector("ul.menu li:nth-child(3)")
+        console.log(thirdMenuItem)
+    </script>
+  </body>
+</html>

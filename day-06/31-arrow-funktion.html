@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Funktion</title>
+</head>
+<body>
+    <input type="number" id="txtPrice" placeholder="Product Price" br> <br>
+    <input type="number" id="txtTaxRate" placeholder="Tax Rate" br> <br>
+    <input type="number" id="txtDiscountRate" placeholder="DiscountRate" br> <br>
+
+    <button onclick="getPrice()">Get Price</button>
+
+    <script>
+        const getPrice = () => { 
+            const txtPrice=document.querySelector("#txtPrice");
+            const txtTaxRate=document.querySelector("#txtTaxRate");
+            const txtDiscountRate=document.querySelector("#txtDiscountRate");
+
+            const price=Number(txtPrice.value);
+            const taxRate=Number(txtTaxRate.value);
+            const discountRate=Number(txtDiscountRate.value);
+
+            if((!price && price!==0) || (!taxRate && taxRate!==0) || (!discountRate && discountRate!==0)){
+                alert("All fields must be filled")
+                return;
+            }
+            const result= setPrice(price,taxRate,discountRate);
+            alert("The last price is "+result);
+         }
+const setPrice=(price,taxRate,discountRate) =>{
+    if(price>1500){
+        discountRate+=10;
+    }
+    if(discountRate<=0){
+        taxRate=0;
+    }
+    const totalTax=price*taxRate/100;
+    const totalDiscount=price*discountRate/100;
+    const total=price-totalDiscount+totalTax;
+    return total;
+}
+
+
+    </script>
+    
+</body>
+</html>

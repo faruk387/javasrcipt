@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Circuit</title>
+</head>
+<body>
+    <script>
+        const x=5;
+        const y=4;
+        const z=14;
+        console.log(x>y && z>y && y==4);
+        console.log(x>y && z>y && y);
+        console.log(x>y && z<y && y);
+
+        //short circuit
+        z>5 && z<25 && alert("Congratulations!")
+
+
+        console.log(z<y || y>x || y>z);
+        console.log(z<y || y>x || z);
+        console.log(z<y || y<x || z);
+
+        //short circuit
+
+        y===35 || alert("Not Izmir");
+
+
+
+    </script>
+</body>
+</html>
